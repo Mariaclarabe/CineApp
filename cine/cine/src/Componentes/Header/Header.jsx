@@ -2,9 +2,9 @@ import Navbar from "../Navbar/Navbar";
 
 function Header() {
     return ( 
-       <header>
-        <span>Olá visitante!</span>
-      <h1>Bem-Vindo ao CineApp!</h1>
+       <header className="flex bg-primary-maria text-white p-4 mb-6">
+        <span>Olá visitante! </span>
+      <h1>Bem-Vindo ao CineApp! </h1>
       <Navbar/>
        </header>
      );
