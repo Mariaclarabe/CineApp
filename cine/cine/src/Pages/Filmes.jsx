@@ -10,7 +10,7 @@ function Filmes() {
             filme=> (
                 <>
                 <h1 key={filme.title}>{filme.title}</h1>
-                <img src="{filmes.image}" alt="" />
+                <img src={filme.image} alt="" />
                 </>
             )
            )
