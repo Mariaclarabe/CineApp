@@ -1,7 +1,7 @@
 function Sobre() {
   return (
     <div className="Sobre">
-    <header className="Sobre -header">
+    <header className="Sobre-header">
       <h1>Vintage Movies</h1>
       <p>
         Bem-vindo ao Vintage Movies onde os clássicos nunca saem de moda.

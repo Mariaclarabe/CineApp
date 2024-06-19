@@ -1,5 +1,48 @@
 import data from '../../artigos.json'
+import { Carousel } from "react-router-dom";
 
+
+export function CarouselCustomNavigation() {
+    return (
+      <Carousel
+        className="rounded-xl"
+        navigation={({ setActiveIndex, activeIndex, length }) => (
+          <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
+            {new Array(length).fill("").map((_, i) => (
+              <span
+                key={i}
+                className={`block h-1 cursor-pointer rounded-2xl transition-all content-[''] ${
+                  activeIndex === i ? "w-8 bg-white" : "w-4 bg-white/50"
+                }`}
+                onClick={() => setActiveIndex(i)}
+              />
+            ))}
+          </div>
+        )}
+      >
+        <img
+          src="freddycarrossel.jpg"
+          alt="image 1"
+          className="h-full w-full object-cover"
+        />
+        <img
+          src="jasoncarrossel.jpg"
+          alt="image 2"
+          className="h-full w-full object-cover"
+        />
+        <img
+          src="pulpfictioncarrossel.jpg"
+          alt="image 3"
+          className="h-full w-full object-cover"
+        />
+        <img
+          src="oiluminadocarrossek"
+          alt="image 3"
+          className="h-full w-full object-cover"
+        />
+      </Carousel>
+    );
+  }
 function Home() {
     return (  
         <>       
@@ -8,7 +51,6 @@ function Home() {
             data.map(
                 (filme, index)=> (
                     <div className= 'card rounded-lg shadow-md p-6 m-3' key={index}>
-                        <h1>{filme.title}</h1>
                         <img className = ' w-[200px] h-400[px] m-3' src={filme.image}/>
                         <div className='tags'>
                         <div className='text'>
@@ -16,7 +58,7 @@ function Home() {
                         </div>
                         {
                             filme.tags.map(tag => (
-                                <span className="bg-pink-800  text-white p-2 m-4" key={tag} >{tag}</span>
+                                <span className="bg-pink-800  text-white p-2 m-4 rounded" key={tag} >{tag}</span>
                             ))
                         }
 
