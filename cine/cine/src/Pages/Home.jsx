@@ -3,6 +3,7 @@ import { Carousel } from "@material-tailwind/react";
 
 
 
+
 function Home() {
     return (  
         <>       
@@ -23,28 +24,38 @@ function Home() {
         )}
       >
         <img
-          src="freddycarrossel.jpg"
+          src="pulpfictioncarrossel.jpg"
           alt="image 1"
           className="h-[800px]  w-[2000px] object-cover"
         />
         <img
           src="jasoncarrossel.jpg"
           alt="image 2"
-          className="h-full w-full object-cover"
+          className="h-[800px] w-[2000px] object-cover"
         />
         <img
-          src="pulpfictioncarrossel.jpg"
+          src="oiluminadocarrossek.jpg"
           alt="image 3"
-          className="h-full w-full object-cover"
+          className="h-[800px] w-[2000px] object-cover"
+        />
+        <img
+          src="freddycarrossel.jpg"
+          alt="image 3"
+          className="h-[800px] w-[2000px] object-cover"
         />
       </Carousel>
+
+      <div className="col-span-3 flex bg-primary-maria text-white text-7xl justify-center items-center p-10 space-x-8 font-serif">
+                <span>Favoritos</span>
+                
+            </div>
 
         <div className='grid grid-cols-3'>
            {
             data.map(
                 (filme, index)=> (
                     <div className= 'card rounded-lg shadow-md p-6 m-3' key={index}>
-                        <img className = ' w-[200px] h-400[px] m-3' src={filme.image}/>
+                        <img className = 'w-[200px] h-400[px] m-3' src={filme.image}/>
                         <div className='tags'>
                         <div className='text'>
                     
