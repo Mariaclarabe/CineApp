@@ -1,11 +1,13 @@
 import data from '../../artigos.json'
-import { Carousel } from "react-router-dom";
+import { Carousel } from "@material-tailwind/react";
 
 
-export function CarouselCustomNavigation() {
-    return (
-      <Carousel
-        className="rounded-xl"
+
+function Home() {
+    return (  
+        <>       
+        <Carousel
+        className="rounded-xl carrossel"
         navigation={({ setActiveIndex, activeIndex, length }) => (
           <div className="absolute bottom-4 left-2/4 z-50 flex -translate-x-2/4 gap-2">
             {new Array(length).fill("").map((_, i) => (
@@ -23,7 +25,7 @@ export function CarouselCustomNavigation() {
         <img
           src="freddycarrossel.jpg"
           alt="image 1"
-          className="h-full w-full object-cover"
+          className="h-[800px]  w-[2000px] object-cover"
         />
         <img
           src="jasoncarrossel.jpg"
@@ -35,17 +37,8 @@ export function CarouselCustomNavigation() {
           alt="image 3"
           className="h-full w-full object-cover"
         />
-        <img
-          src="oiluminadocarrossek"
-          alt="image 3"
-          className="h-full w-full object-cover"
-        />
       </Carousel>
-    );
-  }
-function Home() {
-    return (  
-        <>       
+
         <div className='grid grid-cols-3'>
            {
             data.map(
