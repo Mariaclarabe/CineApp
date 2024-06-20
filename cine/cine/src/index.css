@@ -4,11 +4,8 @@
 
 
 .Sobre {
-    text-align: center;
-  }
- 
-  .Sobre-header {
-    background-color: rgb(255, 246, 232);
+  background-color: beige;
+    text-align: left;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,6 +14,18 @@
     font-size: calc(10px + 2vmin);
     color: black;
     font-family: initial;
+  }
+ 
+  .Sobre-header {
+    background-color:beige;
+    text-align: left;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: calc(8px + 2vmin);
+    color: black;
+    font-family: sans-serif;
 
   }
 

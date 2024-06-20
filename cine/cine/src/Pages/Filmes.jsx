@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import {Link} from 'react-router-dom';
+import { IoSearch } from "react-icons/io5";
+
 
 function Filmes() {
 
@@ -15,24 +16,170 @@ function Filmes() {
   
     return ( 
         <>
-        <h1>Filmes</h1>
-        <div className="listaFilmes flex flex-row gap-3 flex-wrap"> 
+    
+        <div className="absolute right-8">
+                <IoSearch />
+        </div>
+
+        
+            
+        <h1 className="flex py-5 lg:px-20 md:px-10 px-5 lg:mx-40 md:mx-20 mx-5 font-serif text-4xl text-black">Terror</h1>
+                              
+            <div className="listaFilmes flex"> 
             {
                 filmes.map(
                     filme => (
-                    <div className="card-filme" key= {filme.id}>
-                        <img src= {`https://image.tmdb.org/t/p/w92/${filme.poster_path}`}/>
-                        <h1>{filme.title}</h1>
-                        <Link  to={`${filme.id}`} className="bg-pink-200">Saiba Mais</Link>
+
+                <>
+                  
+                        <div className="flex bg-brown-200 m-auto p-4">
+                    
+                              <div
+                                className="flex overflow-x-scroll pb-10 hide-scroll-bar"
+                              >
+                                <div
+                                  className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 "
+                                >
+                                  <div className="inline-block px-1">
+                                    <div
+                                      className="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                                    >
+                                         <img src= {`https://image.tmdb.org/t/p/w300/${filme.backdrop_path}`}/>
+                                         
+                                            <h1 className="ml-20">{filme.title}</h1>
+                                            
+
+                                    </div>
+                                  </div>
+                                 
+                                </div>
+                              </div>
                         </div>
+                        </>
                     )
                 )
             }
-
+    
         </div>
+
+        <h1 className="flex py-5 lg:px-20 md:px-10 px-5 lg:mx-40 md:mx-20 mx-5 font-serif text-4xl text-black">Romance</h1>
+
+        <div className="listaFilmes flex"> 
+            {
+                filmes.map(
+                    filme => (
+
+                <>
+                  
+                        <div className="flex bg-brown-200 m-auto p-4">
+                    
+                              <div
+                                className="flex overflow-x-scroll pb-10 hide-scroll-bar"
+                              >
+                                <div
+                                  className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 "
+                                >
+                                  <div className="inline-block px-1">
+                                    <div
+                                      className="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                                    >
+                                         <img src= {`https://image.tmdb.org/t/p/w300/${filme.backdrop_path}`}/>
+                                         
+                                            <h1 className="ml-20">{filme.title}</h1>
+                                            
+
+                                    </div>
+                                  </div>
+                                 
+                                </div>
+                              </div>
+                        </div>
+                        </>
+                    )
+                )
+            }
+    
+        </div>
+
+        <h1 className="flex py-5 lg:px-20 md:px-10 px-5 lg:mx-40 md:mx-20 mx-5 font-serif text-4xl text-black">Comédia</h1>
         
+        <div className="listaFilmes flex"> 
+            {
+                filmes.map(
+                    filme => (
+
+                <>
+                  
+                        <div className="flex bg-brown-200 m-auto p-4">
+                    
+                              <div
+                                className="flex overflow-x-scroll pb-10 hide-scroll-bar"
+                              >
+                                <div
+                                  className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 "
+                                >
+                                  <div className="inline-block px-1">
+                                    <div
+                                      className="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                                    >
+                                         <img src= {`https://image.tmdb.org/t/p/w300/${filme.backdrop_path}`}/>
+                                         
+                                            <h1 className="ml-20">{filme.title}</h1>
+                                            
+
+                                    </div>
+                                  </div>
+                                 
+                                </div>
+                              </div>
+                        </div>
+                        </>
+                    )
+                )
+            }
+    
+        </div>
+
+        <h1 className="flex py-5 lg:px-20 md:px-10 px-5 lg:mx-40 md:mx-20 mx-5 font-serif text-4xl text-black">Ação</h1>
+
+    <div className="listaFilmes flex"> 
+    {
+        filmes.map(
+            filme => (
+
+        <>
+          
+                <div className="flex bg-brown-200 m-auto p-4">
+            
+                      <div
+                        className="flex overflow-x-scroll pb-10 hide-scroll-bar"
+                      >
+                        <div
+                          className="flex flex-nowrap lg:ml-40 md:ml-20 ml-10 "
+                        >
+                          <div className="inline-block px-1">
+                            <div
+                              className="w-64 h-64 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                            >
+                                 <img src= {`https://image.tmdb.org/t/p/w300/${filme.backdrop_path}`}/>
+                                 
+                                    <h1 className="ml-20">{filme.title}</h1>
+                                    
+
+                            </div>
+                          </div>
+                         
+                        </div>
+                      </div>
+                </div>
+                </>
+            )
+        )
+    }
+
+</div>
+
         </>
-        
      );
 }
 

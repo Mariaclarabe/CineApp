@@ -45,24 +45,25 @@ function Home() {
         />
       </Carousel>
 
-      <div className="col-span-3 flex bg-primary-maria text-white text-7xl justify-center items-center p-10 space-x-8 font-serif">
+      <div className="col-span-3 flex bg-pink-900 text-white text-7xl justify-center items-center p-10 space-x-8 font-serif">
                 <span>Favoritos</span>
                 
             </div>
-
+            <br></br>
+            <br></br>
         <div className='grid grid-cols-3'>
            {
             data.map(
                 (filme, index)=> (
                     <div className= 'card rounded-lg shadow-md p-6 m-3' key={index}>
-                        <img className = 'w-[200px] h-400[px] m-3' src={filme.image}/>
+                        <img className = 'w-[200px] h-400[px] m-6 rounded shadow-md' src={filme.image}/>
                         <div className='tags'>
                         <div className='text'>
                     
                         </div>
                         {
                             filme.tags.map(tag => (
-                                <span className="bg-pink-800  text-white p-2 m-4 rounded" key={tag} >{tag}</span>
+                                <span className="bg-pink-50  text-black p-2 m-4 rounded" key={tag} >{tag}</span>
                             ))
                         }
 
